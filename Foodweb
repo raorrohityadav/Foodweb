@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+<style>
+        *{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+   color: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 33px;
+    box-shadow: 0px 1px 5px 0px  rgb(252, 252, 252);
+}
+
+nav input{
+    width: 600px;
+    padding: 11px;
+    height: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 2px;
+}
+.input i{
+    margin-left: -28px;
+    color: black;
+    font-size: 20px;
+}
+.head h1{
+    text-align: center;
+    font-size: 44px;
+    margin-top: 53px;
+    margin-left: 22px;
+}
+.head span{
+    color: rgb(255, 119, 0);
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    width: 140px;
+    height: 38px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    margin-inline: 11px;
+    background-color: rgb(255, 111, 0);
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <style>
+                    .logo h1{
+ size: 37px;
+    color: rgb(255, 106, 0);
+    margin-top: -2px;
+}
+                </style>
+                <h1>Rohit Food Restaurant Mothuka</h1>
+            </div>
+            <div class="input">
+                <input type="text" value="" id="inp" placeholder="Search Here ..." onkeyup="myFun()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="icon">
+                <style>
+                    .icon i{
+    font-size: 22px;
+    margin-inline: 8px;
+    background-color: #fff;
+    color: black;
+    padding: 9px;
+    border-radius: 2px;
+}
+.icon i:hover{
+    color: rgb(255, 98, 0);
+    cursor: pointer;
+}
+                </style>
+                <i onclick="login()" class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i onclick="nav()" class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+
+        <div class="login">
+            <style>
+                /* Login */
+
+.login{
+    display: none;
+    position: absolute;
+    margin-left: 80%;
+    width: 200px;
+    padding: 22px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+.login h2{
+    color: black;
+}
+.login input{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 160px;
+    font-size: 18px;
+    padding: 8px;
+    margin-top: 13px;
+}
+.login button{
+    width: 140px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 111, 0);
+    color: white;
+    border-radius: 2px;
+    font-size: 18px;
+    margin-top: 22px;
+}
+            </style>
+            <h2>Log In </h2>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="password" placeholder="Enter Password"> <br>
+            <button>Log In</button>
+
+        </div>
+        <style>
+            /* nav */
+
+.nav{
+    display: none;
+    position: absolute;
+    margin-left: 82%;
+    width: 160px;
+    padding: 22px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 6px;   
+}
+.nav P{
+    width: 110px;
+    color: black;
+    margin-left: 20%;
+    padding: 11px;
+    border-radius: 4px;
+}
+.nav p:hover{
+    background-color: #f1efef;
+    color: rgb(255, 111, 0);
+    cursor: pointer;
+    
+}
+        </style>
+        <div class="nav">
+            <p>Home</p>
+            <p>Foods</p>
+            <p>Blog</p>
+            <p>Customer</p>
+
+
+        </div>
+
+        <!-- main Page -->
+        <style>
+            .main{
+    display: flex;
+    justify-content: space-around;
+}
+.main img{
+    width: 33%;
+    margin-top: 33px;
+}
+.main .text{
+    width: 500px;
+    margin-top: 62px;
+}
+.text h1{
+    font-size: 66px;
+}
+.text p{
+    color: #f6f5f5;
+    margin-top: 22px;
+}
+.text button{
+    margin-top: 24px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 119, 0);
+    color: white;
+    border-radius: 2px;
+    font-size: 22px;
+    width: 160px;
+    height: 40px;
+}
+
+        </style>
+
+        <div class="main">
+            <div class="text">
+                <h1>Simple & Tasty Recipes</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat Repellat consectetur elit. Placeat Repellat voluptas eligendi rerum est quibusdam tempora beatae molestias dicta.</p>
+                <button>Explore More</button>
+            </div>
+            <img src="burger (2).png" alt="">
+        </div>
+
+        <!--  Card Food -->
+<style>
+    .crd{
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 115px;
+    color: black;
+}
+.crd .card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 11px;
+    color: black;
+    margin-inline: 11px;
+    margin-top: 84px;
+
+}
+.card img{
+    width: 100%;
+}
+.card h2{
+    margin-top: 12px;
+}
+
+.card p{
+    margin-top: 12px;
+}
+
+.card button{
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 119, 0);
+    color: white;
+    border-radius: 2px;
+    font-size: 22px;
+    width: 140px;
+    height: 38px;
+}
+
+.card i:hover{
+    color: rgb(255, 98, 0);
+    cursor: pointer;
+}
+</style>
+        <table>
+            <tr>
+                <td>
+                    <div class="head">
+                        <h1>Our <span>Foods</span></h1>
+                    </div>
+                    <div class="crd">
+                        <div class="card">
+                            <img src="fds (1).jpg" alt="">
+                            <h2>99 Rupees Only</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <button>Order Now</button>
+                        </div>
+                        <div class="card">
+                            <img src="fds (2).jpg" alt="">
+                            <h2>99 Rupees Only</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <button>Order Now</button>
+                        </div>
+                        <div class="card">
+                            <img src="fds (7).jpg" alt="">
+                            <h2>99 Rupees Only</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+
+                    <div class="crd">
+                        <div class="card">
+                            <img src="fds (4).jpg" alt="">
+                            <h2>99 Rupees Only</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <button>Order Now</button>
+                        </div>
+                        <div class="card">
+                            <img src="fds (5).jpg" alt="">
+                            <h2>99 Rupees Only</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <button>Order Now</button>
+                        </div>
+                        <div class="card">
+                            <img src="fds (6).jpg" alt="">
+                            <h2>99 Rupees Only</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="head">
+                        <h1>Our <span>Blogs</span></h1>
+                        <style>
+                            .blog{
+    width: 300px;
+    height: 370px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 11px;
+    color: black;
+    margin-inline: 11px;
+    margin-top: 84px;
+}
+.blog h2{
+    margin-top: 12px;
+}
+.blog p{
+    margin-top: 12px;
+}
+.blog a{
+    position: relative;
+    top: 32px;
+    width: 160px;
+    padding: 10px;
+    background-color: rgb(255, 106, 0);
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.blog img{
+    width: 100%;
+}
+                        </style>
+                    </div>
+                    <div class="crd">
+                        <div class="blog">
+                            <img src="fds (6).jpg" alt="">
+                            <h2>Fact About Indian Food</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <a href="https://www.littleindiaofdenver.com/blog/7-facts-you-never-knew-about-indian-food/">Read More</a>
+                        </div>
+                        <div class="blog">
+                            <img src="fds (4).jpg" alt="">
+                            <h2>Diffrent Type of Burger</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <a href="https://www.finedininglovers.com/article/burger-types-famous-to-make">Read More</a>
+                        </div>
+                        <div class="blog">
+                            <img src="fds (7).jpg" alt="">
+                            <h2>Delicious Checken Recipes</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur iusto.</p>
+                            <a href="https://themodernproper.com/60-best-chicken-breast-recipes">Read More</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Customer Review -->
+
+<style>
+    .review{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    margin-top: 63px;
+}
+.review .customer{
+    position: absolute;
+     width: 100%;
+     height: 70%;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 11px;
+    transition: 0.5s ease;
+     
+
+}
+.customer img{
+    width: 33%;
+    border-radius: 50%;
+}
+.customer i{
+    font-size: 22px;
+    color: rgb(255, 132, 0);
+    margin-top: 11px;
+}
+.head h1{
+    text-align: center;
+    font-size: 44px;
+    margin-top: 53px;
+    margin-left: 22px;
+}
+.head span{
+    color: rgb(255, 119, 0);
+}
+    </style>
+        <div class="head">
+            <h1>Customer <span>Review</span></h1>
+        </div>
+        <div class="review">
+
+            <div class="customer">
+                <img src="men (1).jpg" alt=""> <br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere modi, repudiandae nostrum obcaecati quo?</p>
+                
+            </div>
+            <div class="customer">
+                <img src="men (2).jpg" alt=""> <br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere modi, repudiandae nostrum obcaecati quo?</p>
+                
+            </div>
+            <div class="customer">
+                <img src="men (3).jpg" alt=""> <br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere modi, repudiandae nostrum obcaecati quo?</p>
+                
+            </div>
+
+            
+        </div>
+        <div class="btn">
+            <button onclick="pre()">Prev</button>
+            <button onclick="next()">Next</button>
+
+        </div>
+
+        <div class="footer">
+            <style>
+                .footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 55px;
+    margin-top: 77px;
+    
+}
+.footer .txt{
+    color: black;
+}
+.txt p{
+    margin-top: 12px;
+}
+            </style>
+            <div class="txt">
+                <h2>About US</h2>
+                <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Cumque</p>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Foods</p>
+
+            </div>
+            <div class="txt">
+                <h2>About US</h2>
+                <p>Product</p>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Foods</p>
+
+            </div>
+            <div class="txt">
+                <h2>About US</h2>
+                <p>Near</p>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Foods</p>
+
+            </div>
+            <div class="txt">
+                <h2>About US</h2>
+                <p>Websites</p>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Foods</p>
+
+            </div>
+        </div>
+    </div>
+    <script src="Foodweb.js"></script>
+</body>
+</html>
